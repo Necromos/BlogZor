@@ -1,7 +1,38 @@
 <template name="articles">
-  This is yours article:
+  <div class="row-fluid">
+    <div class="span12">
+      List of Articles:
+    </div>
+  </div>
   {{#each articles}}
-    <p>{{name}}</p>
-    <p>{{content}}</p>
+  <div class="row-fluid">
+    <div class="span4 article-name">{{name}}</div>
+    <div class="span6">{{content}}</div>
+    <div class="span2">
+      <button class="btn btn-danger article-remove" type="button">Delete</button>
+    </div>
+  </div>
   {{/each}}
+  <div class="row-fluid">
+    <div class="span4 offset8">
+      <button class="btn btn-primary article-new" type="button">Create New</button>
+    </div>
+  </div>
+</template>
+
+<template name="articleCreate">
+  <div>
+    <form method="post">
+      <input id="article-name" name="name" type="text">
+      <textarea id="article-content" name="content"></textarea>
+      <input id="article-submit" name="submit" type="submit" value="Create">
+    </form>
+  </div>
+</template>
+
+<template name="articleShow">
+  <div class="row-fluid">
+    <div class="span4">{{article.name}}</div>
+    <div class="span8">{{article.content}}</div>
+  </div>
 </template>
