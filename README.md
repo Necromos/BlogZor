@@ -5,6 +5,10 @@ BlogZor is my OpenSource R&D project in Meteor.
 ```
 npm install -g meteorite
 ```
+or
+```
+sudo -H npm install -g meteorite
+```
 
 ##Packages:
 ```
