@@ -6,7 +6,7 @@
   </div>
   {{#each articles}}
   <div class="row-fluid">
-    <div class="span4 article-name">{{name}}</div>
+    <div class="span4 article-name"><a href="{{ pathFor 'articleShow'}}">{{name}}</a></div>
     <div class="span6">{{content}}</div>
     <div class="span2">
       <button class="btn btn-danger article-remove" type="button">Delete</button>

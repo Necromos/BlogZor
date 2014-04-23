@@ -1,4 +1,3 @@
-
 Articles = new Meteor.Collection('articles');
 
 Articles.allow({
@@ -20,5 +19,8 @@ if (Meteor.isServer){
   
   Meteor.publish("showArticle", function(articleId){
     return Articles.find({_id: articleId});
+  });
+  Meteor.publish("deleteArticle", function(articleId){
+    return Articles.remove({_id: articleId}, 1);
   });
 }
