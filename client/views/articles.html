@@ -1,20 +1,20 @@
 <template name="articles">
   <div class="row-fluid">
-    <div class="span12">
+    <div class="col-md-12">
       List of Articles:
     </div>
   </div>
   {{#each articles}}
   <div class="row-fluid">
-    <div class="span4 article-name"><a href="{{ pathFor 'articleShow'}}">{{name}}</a></div>
-    <div class="span6">{{content}}</div>
-    <div class="span2">
+    <div class="col-md-4 article-name"><a href="{{ pathFor 'articleShow'}}">{{name}}</a></div>
+    <div class="col-md-6">{{content}}</div>
+    <div class="col-md-2">
       <button class="btn btn-danger article-remove" type="button">Delete</button>
     </div>
   </div>
   {{/each}}
   <div class="row-fluid">
-    <div class="span4 offset8">
+    <div class="col-md-4 offset8">
       <button class="btn btn-primary article-new" type="button">Create New</button>
     </div>
   </div>
@@ -32,7 +32,7 @@
 
 <template name="articleShow">
   <div class="row-fluid">
-    <div class="span4">{{article.name}}</div>
-    <div class="span8">{{article.content}}</div>
+    <div class="col-md-4">{{article.name}}</div>
+    <div class="col-md-8">{{article.content}}</div>
   </div>
 </template>
